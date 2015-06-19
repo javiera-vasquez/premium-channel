@@ -1,5 +1,5 @@
-# premium-channel
-> A site for advertise the premium channel of VTR [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process
+# Premium Channel
+> A site for advertise the premium channel of VTR using the base from [Yeoman](http://yeoman.io)
 
 ## Getting Started
 
