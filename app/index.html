@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="">
   <head>
@@ -12,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,10 +28,10 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="toolbar clearfix">
+    <div class="toolbar clearfix">
+      <div class="container">
         <ul class="list-inline pull-left">
-          <li><a href="http://vtr.com/" target="_blank" id="hl2011-vtr-com"><img src="http://vtr.com/images/vtr.com.png"></a></li>
+          <li><a href="http://vtr.com/" target="_blank" id="hl2011-vtr-com"><img src="/images/vtr.com.png"></a></li>
           <li><a href="http://vtr.com/hogar/" target="_blank">Productos</a></li>
           <li><a href="http://vtr.com/sucursal.php" target="_blank">Sucursal Virtual</a></li>
           <li><a href="http://centrodeayudaonline.vtr.cl/" target="_blank">Centro
@@ -41,34 +41,65 @@
         </ul>
         <a href="http://vtr.com/" target="_blank" id="hl2011-logo" class="right show-for-large-up"></a>
       </div>
-      <div class="header">
-
-      </div>
-      <!-- end header & toolbar -->
-
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+    </div>
+    <div class="header navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="logo-vtr">
+              <img src="images/vtr.png">
+            </div>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <ul class="nav nav-pills pull-right">
+              <li><a href="#vtr" title="VTR Premium">VTR Premium</a></li>
+              <li><a href="#fox" title="FOX+">FOX +</a></li>
+              <li><a href="#hbo" title="HBO Max">HBO Max</a></li>
+              <li><a href="#adulto" title="Pack Adulto">Pack Adulto</a></li>
+              <li><a href="#cdf" title="cdf">CDF</a></li>
+              <li><a href="#FoxSports" title="FoxSports">FoxSports</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- end header & toolbar -->
 
-      <div class="footer">
+    <div id="vtr">
+      <div class="container">
+        <h1 class="text-center">LO MEJOR DE LA TV ESTÁ EN PREMIUM</h1>
+        <h2 class="text-center">ÚLTIMOS ESTRENOS SIN CORTES EN IDIOMA ORIGINAL,<br /> CONTENIDO ON DEMAND PARA VER CUANDO TU QUIERAS Y CUANTAS VECES QUIERAS</h2>
+        <p class="text-center"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></p>
+      </div>
+    </div>
+    <!-- end vtr box -->
+
+    <div class="divisor">
+      <h4 class="text-center">FOX+</h4>
+      <p class="text-center"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
+    </div>
+    <!-- end divisor -->
+
+    <div id="fox">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <img src="images/fox.png">
+          </div>
+          <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <p>Todo lo mejor del cine y series: Estrenos, vanguardia, clásico, alternativo. </p>
+            <p>Los mejores estrenos de Hollywood como nunca antes imaginaste, en alta definición (HD).</p>
+            <p>¡Para los fanáticos del cine en Alta Definición! Con tu pack Fox+ On Demand disfruta de Fox Play+. Ingresa al Canal 900 y encuentra en la categoría Premium, la sección Fox Play+, para ver las mejores películas en Anlta Definición, cuando quieras, las veces que quieras.</p>
+            <p>Incluye 6 canales en definición estándar, una señal On Demand y tres señales HD (para clientes con d-BOX HD). </p>
+            <p><button type="button" class="btn btn-default">¡Actívalo al instante!</button> Por $6.990</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end fox -->
+
+    <div id="footer">
+      <div class="container">
         <p>♥ from the Yeoman team</p>
       </div>
     </div>
@@ -99,9 +130,11 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- bower:js -->
+    <script src="/scripts/main.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
   </body>
 </html>
