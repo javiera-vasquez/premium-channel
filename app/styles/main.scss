@@ -73,7 +73,26 @@ body {
 .header {
   margin-top: 44px;
   height: 80px;
-  background: rgba(black, 0.5);
+  background: rgba(black, 0.35);
+  .logo-vtr {
+    max-width: 70%;
+    background-color: black;
+    padding: 20px 10px;
+    // img {width: 80%;}
+  }
+  .nav {
+    margin-top: 20px;
+    a {
+      color: white;
+      font-size: 1.2em;
+      line-height: 1.3em;
+      &:hover {
+        line-height: 1.2em;
+        font-weight: bold;
+        background: transparent;
+      }
+    }
+  }
 }
 
 .header.active {margin-top: 0;}
@@ -143,8 +162,14 @@ body {
 }
 
 /* Channel box */
+#fox {background-image: url(../images/channel01.jpg);}
+#hbo {background-image: url(../images/channel02.jpg);}
+#adulto {background-image: url(../images/channel03.jpg);}
+#cdf {background-image: url(../images/channel04.jpg);}
+#foxsports {background-image: url(../images/channel05.jpg);}
+
 .channelBox {
-  background: url(../images/channel01.jpg) no-repeat ;
+  background-repeat:  no-repeat ;
   background-size: cover;
   .overlay {
     padding: 6em 0;
