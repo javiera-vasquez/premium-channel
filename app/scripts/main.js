@@ -1,5 +1,3 @@
-// Watch scroll for active element
-//$('#header').scrollspy({ target: '#navbar-example' });
 // Document ready
 $(function() {
 	// Calc the height of the viewport and pass to the #vtr landing
@@ -19,12 +17,19 @@ $(function() {
 	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	  if (target.length) {
 	    $('html,body').animate({
-	      scrollTop: target.offset().top - 80
+	      scrollTop: target.offset().top
 	    }, 1000);
 	    return false;
 	  }
 	}
 	});
+	// Check height of the div
+	$(".channelBox").each(function(i){
+		if($(this).height() < 500) {
+			console.log($(this).children());
+			$(this).children().css('padding', '10em 0');
+		}
+	})
 });
 
 
