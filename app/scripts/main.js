@@ -3,9 +3,11 @@
 // Document ready
 $(function() {
 	// Calc the height of the viewport and pass to the #vtr landing
-	var windowsHeight = $(window).height() - ($('.toolbar').height() + $('.divisor').height() + 30);
-	var animationNav = 'animated fadeIn active';
+	var windowsHeight = $(window).height() - ($('.toolbar').height() + $('.divisor').height() + 30),
+		containerHeight = $('#vtr .container').height(),
+		animationNav = 'animated fadeIn active';
 	$('#vtr').css('height', windowsHeight + 'px');
+	$('#vtr .container').css('padding-top', Math.floor((windowsHeight - containerHeight) / 2 + 50 ) + 'px')
 	// Check the scroll top, and remove negative margin to .header
 	$(window).on('scroll', function() {
 		if($(window).scrollTop() >= 44) {

@@ -132,20 +132,21 @@ body {
   background: url(../images/landing.jpg) no-repeat;
   background-size: cover;
   .container {
-    padding-top: 15%;
+    // padding-top: 15%;
     color: white;
     .glyphicon {
       @include light;
-      font-size: 6em;
+      font-size: 5em;
       text-shadow: 0 0 10px rgba(black, 0.25);
     }
     h1,h2 {
       margin-bottom: 1em;
       text-shadow: 0 0 10px rgba(black, 0.5);
     }
-    h1 {font-size: 4em;}
+    h1 {font-size: 3.5em;}
     h2 {
       @include light;
+      // font-size: 2em;
       line-height: 1.6;
     }
   }
@@ -239,7 +240,6 @@ body {
 /* Media querys */
 @media (min-width: $screen-xs-min) {
    /* rules for mobile horizontal (480 > 768)  */
-   // body {padding-top: 8em;}
 }
 @media (min-width: $screen-sm-min) {
    /* rules for tablet (768 > 992) */
