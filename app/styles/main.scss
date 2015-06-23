@@ -143,11 +143,15 @@ body {
       margin-bottom: 1em;
       text-shadow: 0 0 10px rgba(black, 0.5);
     }
-    h1 {font-size: 3.5em;}
+    h1 {
+      font-size: 3em;
+      line-height: 1.2;
+    }
     h2 {
       @include light;
-      // font-size: 2em;
+      font-size: 1.5em;
       line-height: 1.6;
+      margin-bottom: 2em;
     }
   }
 }
@@ -185,17 +189,20 @@ body {
   background-repeat:  no-repeat ;
   background-size: cover;
   .overlay {
-    padding: 6em 0;
+    padding: 5em 0 3em;
     background: -webkit-linear-gradient(left, rgba(black, 0.1), rgba(black, 0.5));
   }
-  .img-responsive {margin-bottom: 2em;}
+  .img-responsive {
+    margin-bottom: 3em;
+  }
   p {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 1em;
     text-shadow: 0 0 5px rgba(black, 0.5);
   }
   .btn-gold {
+    margin-top: 1em;
     color: white;
     margin-right: 20px;
     font-size: 1em;
@@ -214,10 +221,7 @@ body {
 
 .last {
   background-color: black;
-  padding: 6em;
-  .container {
-    max-width: 900px;
-  }
+  padding: 4em 0;
   h2, h4 {
     color: white;
     margin-bottom: 1em;
@@ -240,13 +244,23 @@ body {
 /* Media querys */
 @media (min-width: $screen-xs-min) {
    /* rules for mobile horizontal (480 > 768)  */
+   .header .nav a {font-size: 1em;}
 }
 @media (min-width: $screen-sm-min) {
    /* rules for tablet (768 > 992) */
 }
 @media (min-width: $screen-md-min) {
    /* rules for desktop (992 > 1200) */
+   .header .nav a {font-size: 1.2em;}
+   #vtr .container h1 {font-size: 3.5em;}
+   #vtr .container h2 {font-size: 1.8em;}
+   .channelBox p {font-size: 1.3em;}
+   .last {padding: 6em;}
 }
 @media (min-width: $screen-lg-min) {
    /* rules for large (> 1200) */
+   #vtr .container h1 {font-size: 4em;}
+   #vtr .container h2 {font-size: 2em;}
+   #vtr .container .glyphicon {font-size: 6em;}
+   .channelBox p {font-size: 1.4em;}
 }
