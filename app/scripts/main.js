@@ -7,7 +7,7 @@ $(function() {
 		containerHeight = $('#vtr .container').height(),
 		animationNav = 'animated fadeIn active';
 	$('#vtr').css('height', windowsHeight + 'px');
-	$('#vtr .container').css('padding-top', Math.floor((windowsHeight - containerHeight) / 2 + 50 ) + 'px')
+	$('#vtr .container').css('padding-top', Math.floor((windowsHeight - containerHeight) / 2 + 50 ) + 'px');
 	// Check the scroll top, and remove negative margin to .header
 	$(window).on('scroll', function() {
 		if($(window).scrollTop() >= 44) {
