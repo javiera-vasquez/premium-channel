@@ -27,6 +27,14 @@ $icon-font-path: '../fonts/';
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NeoSans';
+  src: url('../fonts/neosansstd-light-webfont.eot');
+  src: url('../fonts/neosanspro-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/neosanspro-light-webfont.woff') format('woff'), url('../fonts/neosanspro-light-webfont.ttf') format('truetype'), url('../fonts/neosanspro-light-webfont.svg#NeoSansStdLight') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
 // Basic setting
 @mixin bold {font-weight: 600;}
 @mixin normal {font-weight: normal;}
@@ -40,7 +48,7 @@ $black: #000;
 $ccc: #ccc;
 
 // Basic
-$primary: #a89056;
+$primary: #d3ab44;
 $secondary: #32a8ce;
 $header: #363636;
 $oil: #333;
@@ -69,6 +77,49 @@ body {
   padding-top: 70px;
 }
 
+.btn-gold {
+  margin-top: 1em;
+  color: white;
+  margin-right: 20px;
+  font-size: 1em;
+  border-radius: 15px;
+  line-height: 1.5em;
+  text-shadow: 0 2px 2px darken($primary, 5%);
+  background-color: $primary;
+  border-bottom: 4px solid darken($primary, 15%);
+  &:hover {
+    color: $white;
+    text-shadow: 0 2px 2px darken($primary, 10%);
+    background-color: darken($primary, 5%);
+    border-bottom: 4px solid darken($primary, 20%);
+  }
+}
+
+/* Toolbar of the sites from VTR */
+.toolbar {
+  background-color: black;
+  height: 44px;
+  margin-top: -70px;
+  border-bottom: 1px solid rgba(white, 0.25);
+  .container {
+    background: url(../images/vtrlogochico.png) no-repeat right;
+  }
+  ul {
+    margin-top: 12px;
+    li {
+      border-right: 1px solid rgba(white, 0.8);
+      padding-right: 10px;
+      // line-height: 16px;
+      &:last-child {border-right: none;}
+      a {
+        color: rgba(white, 0.8);
+        font-size: 12px;
+        // line-height: 14px;
+      }
+    }
+  }
+}
+
 /* Header */
 .header {
   margin-top: 44px;
@@ -87,8 +138,9 @@ body {
       font-size: 1.2em;
       line-height: 1.3em;
       &:hover {
-        line-height: 1.2em;
-        font-weight: bold;
+        // line-height: 1.2em;
+        // font-weight: bold;
+        color: $primary;
         background: transparent;
       }
       &:active {background: transparent;}
@@ -97,8 +149,9 @@ body {
     }
   }
   li.active a{
-    line-height: 1.2em;
+    line-height: 1.1em;
     font-weight: bold;
+    color: $primary;
     background: transparent;
     &:active {background: transparent;}
     &:hover {background: transparent;}
@@ -109,28 +162,11 @@ body {
 
 .header.active {margin-top: 0;}
 
-.toolbar {
-  background-color: black;
-  height: 44px;
-  margin-top: -70px;
-  ul {
-    margin-top: 10px;
-    li {
-      border-right: 1px solid rgba(white, 0.8);
-      padding-right: 10px;
-      &:last-child {border-right: none;}
-      a {
-        color: rgba(white, 0.8);
-        font-size: 12px;
-      }
-    }
-  }
-}
-
 /* Landing premium */
 #vtr {
-  background: url(../images/landing.jpg) no-repeat;
-  background-size: cover;
+  // background: url(../images/landing.jpg) no-repeat;
+  // background-size: cover;
+  background-color: #1d1d1a;
   .container {
     // padding-top: 15%;
     color: white;
@@ -139,19 +175,59 @@ body {
       font-size: 5em;
       text-shadow: 0 0 10px rgba(black, 0.25);
     }
+    .logo-intro {
+      margin: 0 auto 4em;
+      width: 50%;
+    }
     h1,h2 {
-      margin-bottom: 1em;
-      text-shadow: 0 0 10px rgba(black, 0.5);
+      margin: 0 1em 1em;
+      color: #fed267;
+      // text-shadow: 0 0 10px rgba(black, 0.5);
     }
     h1 {
-      font-size: 3em;
-      line-height: 1.2;
+      @include light;
+      display: none;
+      font-size: 2em;
+      line-height: 1;
     }
     h2 {
       @include light;
       font-size: 1.5em;
       line-height: 1.6;
       margin-bottom: 2em;
+    }
+  }
+  .second-lvl {
+    margin: 5em 0 5em;
+    h2 {
+      margin-bottom: 0.35em;
+    }
+    p {
+      @include light;
+      font-size: 1.3em;
+      margin: 0 8em 2em;
+    }
+    .row {
+      margin-top: 5em;
+      h1 {
+        display: block;
+        margin: 0;
+      }
+      h3 {
+        @include normal;
+        margin-left: 2.2em;
+        margin-top: -2.3em;
+      }
+      p {
+        margin: 0;
+        margin-left: 2.7em;
+      }
+      .btn-gold {
+        margin-left: 3.3em;
+      }
+      .second {
+        color: $primary;
+      }
     }
   }
 }
@@ -189,32 +265,27 @@ body {
   background-repeat:  no-repeat ;
   background-size: cover;
   .overlay {
-    padding: 5em 0 3em;
+    padding: 8em 0 6em;
     background: -webkit-linear-gradient(left, rgba(black, 0.1), rgba(black, 0.5));
   }
   .img-responsive {
     margin-bottom: 3em;
   }
   p {
+    // @include light;
     color: white;
     font-size: 1.2em;
     margin-bottom: 1em;
     text-shadow: 0 0 5px rgba(black, 0.5);
+    span {color: $primary;}
   }
-  .btn-gold {
-    margin-top: 1em;
-    color: white;
-    margin-right: 20px;
-    font-size: 1em;
-    border-radius: 15px;
-    line-height: 1.5em;
-    text-shadow: 0 2px 2px darken($primary, 5%);
-    background-color: $primary;
-    border-bottom: 7px solid darken($primary, 15%);
-    &:hover {
-      text-shadow: 0 2px 2px darken($primary, 10%);
-      background-color: darken($primary, 5%);
-      border-bottom: 7px solid darken($primary, 20%);
+  .buy {
+    margin-top: 1.5em;
+    .btn-gold {
+      margin-top: -5px;
+    }
+    span {
+      font-size: 1.3em;
     }
   }
 }
@@ -232,12 +303,14 @@ body {
 /* Custom page footer */
 #footer {
   padding: 2em;
-  background-color: black;
+  background: black url(../images/borderbot.png) repeat-x top;
   color: rgba(white, .5);
-  border-top: 1px solid rgba(white, .25);
+  // border-top: 1px solid rgba(white, .25);
   p {
     margin: 0;
     font-size: 12px;
+    text-align: right;
+    img {margin-bottom: 2px;}
   }
 }
 
@@ -245,22 +318,40 @@ body {
 @media (min-width: $screen-xs-min) {
    /* rules for mobile horizontal (480 > 768)  */
    .header .nav a {font-size: 1em;}
+   #vtr .container .logo-intro {width: 40%}
+   #vtr .container .second-lvl .btn-gold {margin-bottom: 5em;}
 }
 @media (min-width: $screen-sm-min) {
    /* rules for tablet (768 > 992) */
+   #vtr .container .logo-intro {width: 30%}
+   #vtr .container h1 {
+    font-size: 3em;
+    margin: 0 2.5em 1em;
+    #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
+  }
 }
 @media (min-width: $screen-md-min) {
    /* rules for desktop (992 > 1200) */
    .header .nav a {font-size: 1.2em;}
-   #vtr .container h1 {font-size: 3.5em;}
+   #vtr .container h1 {
+    font-size: 3.5em;
+    margin: 0 3em 1em;
+  }
    #vtr .container h2 {font-size: 1.8em;}
    .channelBox p {font-size: 1.3em;}
    .last {padding: 6em;}
+   #vtr .container .logo-intro {width: 25%}
+   #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
 }
 @media (min-width: $screen-lg-min) {
    /* rules for large (> 1200) */
-   #vtr .container h1 {font-size: 4em;}
-   #vtr .container h2 {font-size: 2em;}
+   #vtr .container h1 {
+    font-size: 3.5em;
+    margin: 0 4em 1em;
+  }
+   #vtr .container h2 {font-size: 2.2em;}
    #vtr .container .glyphicon {font-size: 6em;}
    .channelBox p {font-size: 1.4em;}
+   #vtr .container .logo-intro {width: 20%}
+   #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
 }

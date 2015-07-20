@@ -4,10 +4,10 @@
 $(function() {
 	// Calc the height of the viewport and pass to the #vtr landing
 	var windowsHeight = $(window).height() - ($('.toolbar').height() + $('.divisor').height() + 30),
-		containerHeight = $('#vtr .container').height(),
+		containerHeight = $('#vtr .landing').height(),
 		animationNav = 'animated fadeIn active';
-	$('#vtr').css('height', windowsHeight + 'px');
-	$('#vtr .container').css('padding-top', Math.floor((windowsHeight - containerHeight) / 2 + 50 ) + 'px');
+	$('#vtr .landing').css('height', windowsHeight + 'px');
+	$('#vtr .landing').css('padding-top', Math.floor((windowsHeight - containerHeight) / 2 - 50) + 'px');
 	// Check the scroll top, and remove negative margin to .header
 	$(window).on('scroll', function() {
 		if($(window).scrollTop() >= 44) {
@@ -22,7 +22,7 @@ $(function() {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
-				$('html,body').animate({scrollTop: target.offset().top}, 1000);
+				$('html,body').animate({scrollTop: target.offset().top - 75}, 1000);
 				return false;
 			}
 		}
@@ -33,8 +33,17 @@ $(function() {
 			$(this).children().css('padding', '10em 0');
 		}
 	});
+	// Loop of intro text
+    var quotes = $('#vtr h1');
+    var quoteIndex = -1;
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(750)
+            .delay(300)
+            .fadeOut(750, showNextQuote);
+    }
+    showNextQuote();
 });
-
-
 
 
