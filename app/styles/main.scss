@@ -186,9 +186,12 @@ body {
     }
     h1 {
       @include light;
-      display: none;
+      // display: none;
       font-size: 2em;
       line-height: 1;
+    }
+    h1:nth-child(1n+1) {
+      display: none;
     }
     h2 {
       @include light;
@@ -205,7 +208,7 @@ body {
     p {
       @include light;
       font-size: 1.3em;
-      margin: 0 8em 2em;
+      margin: 0 1em 2em;
     }
     .row {
       margin-top: 5em;
@@ -216,7 +219,7 @@ body {
       h3 {
         @include normal;
         margin-left: 2.2em;
-        margin-top: -2.3em;
+        margin-top: -1.8em;
       }
       p {
         margin: 0;
@@ -266,7 +269,7 @@ body {
   background-size: cover;
   .overlay {
     padding: 8em 0 6em;
-    background: -webkit-linear-gradient(left, rgba(black, 0.1), rgba(black, 0.5));
+    background: -webkit-linear-gradient(left, rgba(black, 0.25), rgba(black, .75));
   }
   .img-responsive {
     margin-bottom: 3em;
@@ -280,19 +283,27 @@ body {
     span {color: $primary;}
   }
   .buy {
-    margin-top: 1.5em;
+    margin-top: 3em;
     .btn-gold {
       margin-top: -5px;
+      font-size: 1.2em;
+      float: left;
     }
-    span {
-      font-size: 1.3em;
+    p {
+      float: left;
+      line-height: 1;
+    }
+    span {font-size: 1.3em;}
+    .legend {
+      font-size: 0.7em;
+      color: rgba($white, 0.5);
     }
   }
 }
 
 .last {
   background-color: black;
-  padding: 4em 0;
+  padding: 3em 0;
   h2, h4 {
     color: white;
     margin-bottom: 1em;
@@ -310,17 +321,30 @@ body {
     margin: 0;
     font-size: 12px;
     text-align: right;
+    a {color: rgba(white, .5);}
     img {margin-bottom: 2px;}
   }
 }
 
-/* Media querys */
-@media (min-width: $screen-xs-min) {
-   /* rules for mobile horizontal (480 > 768)  */
-   .header .nav a {font-size: 1em;}
-   #vtr .container .logo-intro {width: 40%}
-   #vtr .container .second-lvl .btn-gold {margin-bottom: 5em;}
+// Video
+#modal-video {color: $primary;}
+
+.modal-content {
+ background-color: rgba($white, .80);
 }
+
+// hack for video in modal
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+     -moz-transition: -moz-transform 0.3s ease-out;
+       -o-transition: -o-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {
+
+}
+
 @media (min-width: $screen-sm-min) {
    /* rules for tablet (768 > 992) */
    #vtr .container .logo-intro {width: 30%}
@@ -328,25 +352,27 @@ body {
     font-size: 3em;
     margin: 0 2.5em 1em;
     #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
+    #vtr .second-lvl p {margin: 0 2em 2em;}
   }
 }
 @media (min-width: $screen-md-min) {
    /* rules for desktop (992 > 1200) */
    .header .nav a {font-size: 1.2em;}
    #vtr .container h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0 3em 1em;
   }
    #vtr .container h2 {font-size: 1.8em;}
    .channelBox p {font-size: 1.3em;}
-   .last {padding: 6em;}
+   // .last {padding: 4em;}
    #vtr .container .logo-intro {width: 25%}
    #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
+   #vtr .second-lvl p {margin: 0 8em 2em;}
 }
 @media (min-width: $screen-lg-min) {
    /* rules for large (> 1200) */
    #vtr .container h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0 4em 1em;
   }
    #vtr .container h2 {font-size: 2.2em;}
@@ -354,4 +380,5 @@ body {
    .channelBox p {font-size: 1.4em;}
    #vtr .container .logo-intro {width: 20%}
    #vtr .container .second-lvl .btn-gold {margin-bottom: 1em;}
+   #vtr .second-lvl p {margin: 0 8em 2em;}
 }

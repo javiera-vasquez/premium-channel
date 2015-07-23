@@ -34,16 +34,31 @@ $(function() {
 		}
 	});
 	// Loop of intro text
-    var quotes = $('#vtr h1');
+    var quotes = $('#vtr h1.loop-header');
     var quoteIndex = -1;
     function showNextQuote() {
         ++quoteIndex;
         quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(750)
-            .delay(300)
-            .fadeOut(750, showNextQuote);
+            .fadeIn(500)
+            .delay(2500)
+            .fadeOut(500, showNextQuote);
     }
     showNextQuote();
+    // Modal windows movie
+    $('#modal-video').click(function () {
+        var src = 'https://www.youtube.com/v/C4DHAGBUJQs';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+        return false;
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+    // Stop on close
+    $('#myModal').on('hidden.bs.modal', function () {
+        $('#myModal iframe').attr('src', $('#myModal iframe').attr('src'));
+    });
 });
 
 

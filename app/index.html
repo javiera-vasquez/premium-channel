@@ -31,7 +31,7 @@
     <div class="toolbar clearfix">
       <div class="container">
         <ul class="list-inline pull-left">
-          <li><a href="http://vtr.com/" target="_blank" id="hl2011-vtr-com"><img src="/images/vtr.com.png"></a></li>
+          <li><a href="http://vtr.com/" target="_blank" id="hl2011-vtr-com"><img src="./images/vtr.com.png"></a></li>
           <li><a href="http://vtr.com/hogar/" target="_blank">Productos</a></li>
           <li><a href="http://vtr.com/sucursal.php" target="_blank">Sucursal Virtual</a></li>
           <li><a href="http://centrodeayudaonline.vtr.cl/" target="_blank">Centro
@@ -45,19 +45,19 @@
     <div id="header" class="header navbar-fixed-top hidden-xs">
       <div class="container">
         <div class="row">
-          <div class="col-xs-2 col-sm-3 col-md-2 col-lg-2">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <div class="logo-vtr">
               <img src="images/logo.png" class="img-responsive" title="VTR">
             </div>
           </div>
-          <div class="col-xs-10 col-sm-9 col-md-10 col-lg-10">
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <ul class="nav nav-pills pull-right">
               <li><a href="#vtr" title="VTR Premium">VTR Premium</a></li>
               <li><a href="#fox" title="FOX+">FOX +</a></li>
               <li><a href="#hbo" title="HBO Max">HBO Max</a></li>
               <li><a href="#adulto" title="Pack Adulto">Pack Adulto</a></li>
-              <li><a href="#cdf" title="cdf">CDF</a></li>
-              <li><a href="#foxsports" title="FoxSports">FoxSports</a></li>
+              <li><a href="#cdf" title="cdf">CDF Premium</a></li>
+              <li><a href="#foxsports" title="FoxSports">FOXSports+</a></li>
             </ul>
           </div>
         </div>
@@ -69,15 +69,9 @@
       <div class="container">
         <div class="landing">
           <div class="logo-intro"><img src="images/premium.png" class="img-responsive center-block" title="VTR premium"></div>
-          <h1 class="text-center">LO BUENO DEL CABLE PUEDE SER AUN MEJOR</h1>
-          <h1 class="text-center">LOS MEJORES ESTRENOS, SERIES Y TODO EL CAMPEONATO NACIONAL</h1>
-          <h1 class="text-center">DESDE $3.495 MENSUALES ADICIONALES CONTRATALO EN VTR.COM/PREMIUM</h1>
-          <h1 class="text-center">LO BUENO DEL CABLE PUEDE SER AUN MEJOR</h1>
-          <h1 class="text-center">LOS MEJORES ESTRENOS, SERIES Y TODO EL CAMPEONATO NACIONAL</h1>
-          <h1 class="text-center">DESDE $3.495 MENSUALES ADICIONALES CONTRATALO EN VTR.COM/PREMIUM</h1>
-          <h1 class="text-center">LO BUENO DEL CABLE PUEDE SER AUN MEJOR</h1>
-          <h1 class="text-center">LOS MEJORES ESTRENOS, SERIES Y TODO EL CAMPEONATO NACIONAL</h1>
-          <h1 class="text-center">DESDE $3.495 MENSUALES ADICIONALES CONTRATALO EN VTR.COM/PREMIUM</h1>
+          <h1 class="text-center loop-header">LO BUENO DEL CABLE PUEDE SER AUN MEJOR</h1>
+          <h1 class="text-center loop-header">LOS MEJORES ESTRENOS, SERIES Y TODO EL CAMPEONATO NACIONAL</h1>
+          <h1 class="text-center loop-header">DESDE $6.990 MENSUALES ADICIONALES</h1>
         </div>
       </div>
 
@@ -103,19 +97,33 @@
               <h3>ONLINE</h3>
               <p>Selecciona más abajo el paquete de canales que quieres y selecciona el botón: ¡Actívalo Ahora! Para comprar, necesitas tu clave de ingreso a “Mi VTR” o “Sucursal Virtual”.</p><br />
               <p class="second">Promoción exclusiva online: Contrata ahora tu paquete VTR Premium y llévate un <strong>50% de descuento por 3 meses.</strong></p>
-              <button type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</button>
+              <!-- <button type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</button> -->
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <h1>2</h1>
               <h3>DESDE TU CONTROL REMOTO</h3>
               <p>Puedes comprar en tu casa con tu propio control remoto ingresando al canal 891. Luego, selecciona el paquete que quieras y compra en pantalla utilizando tu Pin de compras.</p><br />
-              <p>Si no lo conoces, te invitamos a visitar nuestro tutorial <a href="">“Pin de compra”</a></p>
+              <p>Si no lo conoces, te invitamos a visitar nuestro tutorial <a href="#" id="modal-video">“Pin de compra”</a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- end vtr box -->
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Crea tu Pin de compra</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="divisor">
       <h4 class="text-center">FOX+</h4>
@@ -134,9 +142,15 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
               <p><strong>Todo lo mejor del cine y series</strong>: Estrenos, vanguardia, clásico, alternativo.</p>
               <p><span>Los mejores estrenos de Hollywood</span> como nunca antes imaginaste, en alta definición (HD).</p>
-              <p>¡Para los fanáticos del cine en Alta Definición! Con tu pack <span>Fox+ On Demand</span> disfruta de Fox Play+. Ingresa al Canal 900 y encuentra en la categoría Premium, la sección Fox Play+, para ver las mejores películas en Alta Definición, cuando quieras, las veces que quieras.</p>
+              <p>¡Para los fanáticos del cine en Alta Definición! Con tu pack <span>FOX+ On Demand</span> disfruta de FOX Play+. Ingresa al Canal 900 y encuentra en la categoría Premium, la sección FOX Play+, para ver las mejores películas en Alta Definición, cuando quieras, las veces que quieras.</p>
               <p><span>Incluye 6 canales en definición estándar, una señal On Demand y tres señales HD</span> (para clientes con d-BOX HD). </p>
-              <p class="buy"><a href="http://beta.vtr.com/productos/detalleProducto/detalleProducto.jsp?id=prodSVOMP4&content=7&Tipo=C2C" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a> <span>Por $6.990 mensuales</span></p>
+              <div class="buy">
+                  <a target="_blank" href="http://vtr.com/mivtr" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a>
+                  <p>
+                    <span>Por $3.495 los 3 primeros meses</span> <br />
+                    <span class="legend">Oferta Web. Valor Referencial $6.990</span>
+                  </p>
+              </div>
             </div>
           </div>
 
@@ -161,10 +175,16 @@
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
               <p>HBO Max On Demand es la <span>evolución en los canales de entretenimiento</span>. Con esta programación pasarás de ser un telespectador a ser el protagonista de la entretención.</p>
-              <p>Más la mejor selección de canales de película y series de HBO en definición estándar.</p>
+              <p>Más la mejor selección de canales de película y series de HBO.</p>
               <p>¡Además! Con tu pack HBO Max On Demand disfruta de <span>HBO On Demand</span> en la sección premium de VOD Canal 900, canal que contiene las mejores películas y todos los episodios de las series más populares de HBO en un solo lugar para ser vistas cuando quieras, las veces que quieras.</p>
               <p><span>Incluye 8 canales en definición standard, 1 señal on demand y 1 señal en HD.</span> (para clientes con d-BOX HD).</p>
-              <p class="buy"><a href="http://beta.vtr.com/productos/detalleProducto/detalleProducto.jsp?id=prodSVODHH&content=4&Tipo=C2C" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a> <span>Por $6.990 mensuales</span></p>
+              <div class="buy">
+                  <a target="_blank" href="http://vtr.com/mivtr" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a>
+                  <p>
+                    <span>Por $3.495 los 3 primeros meses</span> <br />
+                    <span class="legend">Oferta Web. Valor Referencial $6.990</span>
+                  </p>
+              </div>
             </div>
           </div>
 
@@ -190,7 +210,13 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
               <p><span>Los mejores canales de entretenimiento para adultos</span>, una propuesta única en el género que ofrece una variada programación para ti y tu pareja como: Realitys, series originales, shows, películas y especiales.</p>
               <p><span>Incluye 4 canales: Playboy, venus, sextreme y playboy HD.</span> (para clientes con d-BOX HD).</p>
-              <p class="buy"><a href=" http://beta.vtr.com/productos/detalleProducto/detalleProducto.jsp?id=prodPRADUL&content=5&Tipo=C2C" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a> <span>Por $6.990 mensuales</span></p>
+              <div class="buy">
+                  <a target="_blank" href="http://vtr.com/mivtr" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a>
+                  <p>
+                    <span>Por $3.495 los 3 primeros meses</span> <br />
+                    <span class="legend">Oferta Web. Valor Referencial $6.990</span>
+                  </p>
+              </div>
             </div>
           </div>
 
@@ -200,7 +226,7 @@
     <!-- end hbo -->
 
     <div class="divisor">
-      <h4 class="text-center">CDF</h4>
+      <h4 class="text-center">CDF Premium</h4>
       <p class="text-center"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
     </div>
     <!-- end divisor -->
@@ -216,7 +242,13 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
               <p><span>Todo el fútbol nacional las 24 horas</span></p>
               <p>Programas como: En el Nombre del Fútbol, Show de Goles, Código Camarín, entre otros. Además CDF Noticias con toda la cobertura nacional e internacional del ámbito deportivo, teniendo en cuenta también a los equipos de provincias del fútbol chileno. </p>
-              <p class="buy"><a href="http://beta.vtr.com/productos/detalleProducto/detalleProducto.jsp?id=prodFUTNAC&content=6&Tipo=C2C" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a> <span>Por $6.990 mensuales</span></p>
+              <div class="buy">
+                  <a target="_blank" href="http://vtr.com/mivtr" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a>
+                  <p>
+                    <span>Por 6.990 mensuales</span> <br />
+                    <!-- <span class="legend">Oferta Web. Valor Referencial $6.990</span> -->
+                  </p>
+              </div>
             </div>
           </div>
 
@@ -226,7 +258,7 @@
     <!-- end hbo -->
 
     <div class="divisor">
-      <h4 class="text-center">FoxSports</h4>
+      <h4 class="text-center">FOXSports+</h4>
       <p class="text-center"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p>
     </div>
     <!-- end divisor -->
@@ -244,7 +276,13 @@
               <p><span>Lo mejor del fútbol europeo:</span> UEFA Champions League, UEFA Europa League, Serie A de Italia. </p>
               <p>Porque no tenemos solo fútbol, sigue también el Campeonato de la FÓRMULA 1, Tenis del ATP World Tour y mucho más...</p>
               <p><span>Incluye 4 canalaes: FOX Sports 1, FOX Sports 2, FOX Sports 1 HD y FOX Sports 2 HD.</span></p>
-              <p class="buy"><a href="http://beta.vtr.com/productos/detalleProducto/detalleProducto.jsp?id=prodPFOXHD&content=2&Tipo=C2C" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a> <span>Por $6.990 mensuales</span></p>
+              <div class="buy">
+                  <a target="_blank" href="http://vtr.com/mivtr" type="button" class="btn btn-gold btn-lg">¡Actívalo al instante!</a>
+                  <p>
+                    <span>Por 6.990 mensuales</span> <br />
+                    <!-- <span class="legend">Oferta Web. Valor Referencial $6.990</span> -->
+                  </p>
+              </div>
             </div>
           </div>
 
@@ -255,19 +293,16 @@
 
     <div class="last">
       <div class="container">
-        <h2>También puedes activar cualquiera de estos Pack Premium:</h2>
-        <h4>- Ingresando a sucursal virtual o MI VTR desde vtr.com</h4>
-        <h4>- Directamente desde tu control remoto ingresando al canal 891 y seleccionando el Pack Premium que deseas.</h4>
-        <h4>- Llamando al 600 800 900</h4>
+
       </div>
     </div>
 
     <div id="footer">
       <div class="container">
-        <p class="pull-left">© 2015 VTR Globalcom S.A Condiciones de uso vtr.com | Norma 669 | Privacidad</p>
+        <p class="pull-left">© 2015 VTR Globalcom S.A | <a href="http://vtr.com/privacidad/">Condiciones de uso vtr.com</a> | <a href="http://vtr.com/politicas.php">Privacidad</a></p>
         <p class="pull-right">
-          <img src="../images/vtrcomfooter.png"><br/>
-          <img src="../images/6008009000.png">
+          <img src="./images/vtrcomfooter.png"><br/>
+          <img src="./images/6008009000.png">
         </p>
       </div>
     </div>
@@ -279,7 +314,7 @@
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      ga('create','UA-8061465-70');ga('send','pageview');
     </script>
 
     <!-- build:js scripts/vendor.js -->
